@@ -38,17 +38,18 @@ function MyAppBar() {
 
   return (
     <AppBar
-      // max width meddium
       position="static"
       sx={{
         backgroundColor: 'white', boxShadow: 'none',
         borderBottom: '1px solid #E9E9E9',
         paddingY: 2, fontFamily: 'Montserrat',
-        maxWidth:"md", margin:"0 auto"
+        margin: "0 auto"
       }}>
-      <Container>
+      <Container disableGutters>
         <Toolbar disableGutters>
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Box sx={{
+            flexGrow: 1, display: { xs: 'flex', md: 'none' }
+          }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -83,7 +84,8 @@ function MyAppBar() {
             </Menu>
           </Box>
           <Box sx={{
-            flexGrow: 1, display: { xs: 'none', md: 'flex', gap: 40 }
+            flexGrow: 1, padding: 0,
+            display: { xs: 'none', md: 'flex', gap: 40, alignItems: 'center' }
           }}>
             <img
               style={{ cursor: 'pointer', marginRight: 20 }} src="logo.svg"
@@ -95,8 +97,8 @@ function MyAppBar() {
                 onClick={handleCloseNavMenu}
                 sx={{
                   color: '#919191', cursor: 'pointer',
-                  ":hover": { color: '#0F0F0F' }, fontWeight: 500,
-                  transition: 'all 0.3s ease-in'
+                  ":hover": { color: 'black' }, fontWeight: 500,
+                  transition: 'all 0.2s ease-in', padding: '10px 0'
                 }}
               >
                 {page}
@@ -104,13 +106,14 @@ function MyAppBar() {
             ))}
             <ShoppingCartIcon sx={{
               cursor: 'pointer', color: '#919191', marginLeft: 'auto',
-              marginRight: 6
+              marginRight: 6, ":hover": { color: 'black' },
+              transition: 'all 0.2s ease-in'
             }} />
           </Box>
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                <Avatar alt="Remy Sharp" src="./image-avatar.png" sx={{ width: 52, height: 52 }} />
               </IconButton>
             </Tooltip>
             <Menu
