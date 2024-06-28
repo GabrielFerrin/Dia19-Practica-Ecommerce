@@ -59,7 +59,7 @@ function ProductInfo() {
           $250.00
         </Typography>
       </Container>
-      <Container disableGutters sx={{ width: 'auto', display: 'flex', gap: 2, width: '100%',
+      <Container disableGutters sx={{ display: 'flex', gap: 2, width: '100%',
           ...(media1010px && { flexDirection: 'column', width: '100%' })
        }}>
         <Container disableGutters sx={{
