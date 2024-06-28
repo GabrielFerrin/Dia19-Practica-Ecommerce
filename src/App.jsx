@@ -1,12 +1,13 @@
-import AppBar from './components/AppBar'
+import MyAppBar from './components/AppBar'
 
 function App() {
 
   return (
     <div className='app'>
-      <AppBar />
+      <MyAppBar />
     </div>
   )
 }
 
 export default App
+
