@@ -10,7 +10,7 @@ function App() {
       <MyAppBar />
       <Container disableGutters sx={{ 
         display: 'flex', flexDirection: { xs: 'column', md: 'row' },
-        justifyContent: 'center', alignItems: 'center', padding: 2,
+        justifyContent: 'center', alignItems: 'center', padding: { xs: 0, md: 2 },
         gap: 2, flexGrow: 1
       }}>
         <ProductImagery />

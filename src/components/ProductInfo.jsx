@@ -8,7 +8,7 @@ import { useState } from "react";
 
 function ProductInfo() {
   const [qty, setQty] = useState(0)
-  const media1010px = useMediaQuery('(min-width:1010px)');
+  const media1010px = useMediaQuery('(max-width:1010px)');
   return (
     <Container flexgrow={1} sx={{
       display: 'flex', flexDirection: 'column', gap: 4,
@@ -22,7 +22,7 @@ function ProductInfo() {
         }}>
         SNEAKER COMPANY
       </Typography>
-      <Typography variant="h3" gutterBotto
+      <Typography variant="h3" gutterBottom
         sx={{ fontWeight: 800, fontFamily: 'Montserrat', fontSize: 36 }}>
         Fall Limited Edition Sneakers
       </Typography>
@@ -59,25 +59,24 @@ function ProductInfo() {
           $250.00
         </Typography>
       </Container>
-      <Container disableGutters sx={{ width: 'auto', display: 'flex', gap: 2, width: '100%' }}>
-
-
+      <Container disableGutters sx={{ width: 'auto', display: 'flex', gap: 2, width: '100%',
+          ...(media1010px && { flexDirection: 'column', width: '100%' })
+       }}>
         <Container disableGutters sx={{
           bgcolor: '#F7F8FD',
           borderRadius: 2, height: 55, display: 'flex',
           justifyContent: 'space-between', alignItems: 'center',
-          flexGrow: 1, fontWeight: 800, fontFamily: 'Montserrat'
+          flexGrow: 1, fontWeight: 800, fontFamily: 'Montserrat',
         }}>
           <Box onClick={() => setQty(qty > 0 ? qty - 1 : 0)} sx={{
             display: 'flex', alignItems: 'center', justifyContent: 'center',
             width: 55, height: 55, cursor: 'pointer', ':hover img': { opacity: '.5' },
-            ':active': { backgroundColor: '#E2E2E2' }, borderRadius: 2,
-            transition: 'all 0.2s ease-in-out'
+            ':active': { backgroundColor: '#E2E2E2' }, borderRadius: 2
           }}>
-            <img className="qty-icon" src="plus.svg" alt="Plus sign" height={14}
+            <img className="qty-icon" src="minus.svg" alt="Minus sign" height={14}
               style={{ transition: 'all 0.2s ease-in-out' }} />
           </Box>
-          {qty}
+          {qty} {media1010px}
           <Box onClick={() => setQty(qty + 1)} sx={{
             display: 'flex', alignItems: 'center', justifyContent: 'center',
             width: 55, height: 55, cursor: 'pointer', ':hover img': { opacity: '.5' },
@@ -90,7 +89,8 @@ function ProductInfo() {
         <Button variant="contained" startIcon={<ShoppingCartIcon />}
           sx={{
             height: 55, borderRadius: 2, width: '140%',
-            textTransform: 'none', fontWeight: 800, fontFamily: 'Montserrat'
+            textTransform: 'none', fontWeight: 800, fontFamily: 'Montserrat',
+            ...(media1010px && { width: '100%' })
           }}>
           Add to cart
         </Button>

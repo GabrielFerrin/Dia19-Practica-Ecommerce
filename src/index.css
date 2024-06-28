@@ -39,3 +39,9 @@
 .qty-icon {
   color: #FF7D1B;
 }
+
+@media (max-width: 900px) {
+  .app {
+    padding: 0;
+  }
+}
