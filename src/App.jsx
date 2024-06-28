@@ -1,4 +1,4 @@
-import { Container } from '@mui/material'
+import Container from '@mui/material/Container'
 import MyAppBar from './components/AppBar'
 import ProductImagery from './components/ProductImagery'
 import ProductInfo from './components/ProductInfo'

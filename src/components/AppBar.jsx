@@ -8,11 +8,10 @@ import Menu from '@mui/material/Menu'
 import MenuIcon from '@mui/icons-material/Menu'
 import Container from '@mui/material/Container'
 import Avatar from '@mui/material/Avatar'
-import Button from '@mui/material/Button'
 import Tooltip from '@mui/material/Tooltip'
 import MenuItem from '@mui/material/MenuItem'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import { Link } from '@mui/material'
+import Link from '@mui/material/Link'
 
 const pages = ['Collections', 'Men', 'Women', 'About', 'Contact']
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout']

@@ -11,7 +11,7 @@ function ProductImagery() {
     }}>
       <img className="product-image" src="image-product-1.jpg"
         alt="Main product image" height={500} />
-      <ImageList sx={{ width: 501, height: 130 }} cols={4} rowHeight={40}
+      <ImageList sx={{ width: 503, height: 130 }} cols={4} rowHeight={40}
         gap={34}>
         {itemData.map((item) => (
           <ImageListItem key={item.img} position="relative">
